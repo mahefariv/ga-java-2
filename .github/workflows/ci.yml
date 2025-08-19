@@ -37,7 +37,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: place dockerfile
-      run: pwd 
+      run: | 
+        pwd
+        ls /home/runner/work/ga-java-2/ga-java-2
       
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
