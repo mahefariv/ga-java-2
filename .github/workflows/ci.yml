@@ -36,6 +36,9 @@ jobs:
     needs:  build-java
     runs-on: ubuntu-latest
     steps:
+    - name: place dockerfile
+      run: ls 
+      
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
