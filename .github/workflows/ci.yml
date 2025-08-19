@@ -27,12 +27,19 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-    - name : affichage
+    - name : upload - upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: Dockerfile
+        path: Dockerfile
+        overwrite: true
+      
+    - name : affichage ls
       run: |
         ls ./build/libs/*
         pwd
         ls -ail
-        
+      
 
 
 
