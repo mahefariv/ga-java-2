@@ -28,7 +28,11 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name : affichage
-      run: ls ./build/libs/*
+      run: |
+        ls ./build/libs/*
+        pwd
+        ls -ail
+        
 
 
 
