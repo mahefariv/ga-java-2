@@ -34,15 +34,7 @@ jobs:
         path: Dockerfile
         overwrite: true
       
-    - name : affichage ls
-      run: |
-        ls ./build/libs/*
-        pwd
-        ls -ail
-      
-
-
-
+ 
   publish:
     needs:  build-java
     runs-on: ubuntu-latest
@@ -55,6 +47,7 @@ jobs:
     - uses: actions/download-artifact@v5
       with:
         name: Dockerfile
+        run: ls *ail
         
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
