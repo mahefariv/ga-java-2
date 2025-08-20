@@ -42,12 +42,12 @@ jobs:
     - name: place dockerfile
       run: | 
         pwd
-        ls /home/runner/work/ga-java-2/ga-java-2
+        ls -ail
     
     - uses: actions/download-artifact@v5
       with:
         name: Dockerfile
-        run: ls *ail
+        run: ls -ail
         
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
